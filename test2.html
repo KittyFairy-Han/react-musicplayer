@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>专利申请-杭州电子科技大学工业设计系</title>
+    <meta name="keywords" content="实验室,Teaching and research,专利名录,Patent List,hdu,hdu,工业设计系，杭州电子科技大学。"/>
+    <meta name="description" content="实验室,Teaching and research,专利名录,Patent List,hdu,hdu,工业设计系，杭州电子科技大学。"/>
+</head>
+<body>
+
+<!--
+<!-------------------------------
+主体
+--------------------------------- >
+-->
+<div class="base cc wrap bc1">
+    <div class="leftsideBar f_l">
+        <h2 class="cc"><span class="c_t4 f_l iblock f_b f_14 b_bSd">专利申请</span></h2>
+        <ul class="list cc">
+            <?php foreach ($items as $item): ?>
+            <li>
+                <a href="<?php echo site_url().'//gysj/Patent_Application/Item/'.$item['id'];?>">
+                    <span class="ls"><?php echo $item['title']; ?></span>
+                    <span class="rs"><?php echo $item['addtime']; ?></span>
+                </a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+        <div class="page cc t_r">
+            <?php
+            for($i=1;$i<=$pages;$i++){
+            echo "<a href=".site_url()."//gysj/Patent_Application/PatentApplication/".$cla.'/'.$i.">".$i."</a>";
+            }
+            ?>
+        </div>
+    </div>
+    <!--
+右侧
+-->
+    <div class="rightsideBar f_r">
+        <h2 class="c_t3 cc f_b f_14">
+            专利申请<p class="gray f_normal f_12">Design Competition</p>
+        </h2>
+        <ul class="subnav cc b_tDd b_bDd">
+            <?php foreach ($classes as $class): ?>
+            <li>
+                <a href="<?php echo site_url().'//gysj/Patent_Application/PatentApplication/'.$class['cid'];?>">
+                    <span><?php echo $class['title']; ?></span>
+                    |
+                    <span><?php echo $class['en_title']; ?></span>
+                </a>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+        <div class="banner_right_01 cc">
+            <a href="" target="_blank">
+                <img src="<?php echo base_url() ?>/style/img/banner_right.gif" title="2009创意杭州启动"/>
+            </a>
+        </div>
+    </div>
+    <!--
+    右侧
+    -->
+</div>
+</body>
+</html>

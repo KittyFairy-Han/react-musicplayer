@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>工业产品设计实验教学示范中心-杭州电子科技大学</title>
+    <meta name="keywords" content="概况介绍，Summary introduction，专业介绍，Introduction，工业设计系，杭州电ss子科技大学。"/>
+    <meta name="description" content="工业设计是一门自然科学与人文科学相交融的新兴学科。杭州电子科技大学的工业设计专业于2000年经国家教委批准开始招生。每年从理科考生中录取新生，目前主要以本科教育为主。工业设计学科主要以工业产品的开发设计为主要教学内容。培养具有一定艺术素养、科学思维方式和创新能力，能够从事大众消费品设计与研发，并且在平面、环境设计方面具备一定能力的应用型人才。"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=7"/>
+    <link rel="stylesheet" href="<?php echo base_url() ?>/style/css/common.css" media="screen" type="text/css"/>
+    <link rel="stylesheet" href="<?php echo base_url() ?>/style/css/base.css" media="screen" type="text/css"/>
+    <link rel="stylesheet" href="<?php echo base_url() ?>/style/css/style.css" media="screen" type="text/css"/>
+    <script type="text/javascript" src="<?php echo base_url() ?>/style/inc/jquery.min.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url() ?>/style/css/home.css"  type="text/css" />
+</head>
+<body>
+<!--
+<!-------------------------------
+页首
+--------------------------------- >
+-->
+<div class="header cc wrap Y">
+    <h1 class="logo f_l">
+        <a href="<?php echo site_url().'/Home/index';?>">
+            <img src="<?php echo base_url() ?>/style/img/logo.png" alt="工业产品设计实验教学示范中心-杭州电子科技大学"/>
+        </a>
+    </h1>
+    <div class="banner-nav f_r">
+        <div class="banner-top cc">
+            <img src="<?php echo base_url() ?>/style/img/banner-top.jpg"/>
+        </div>
+        <ul class="nav cc b_bSd f_lil f_b">
+            <li>
+                <a href="<?php echo site_url().'/Home/index';?>"> 首 页 </a>
+                <ol class="hide">
+                    <li><a href="<?php echo site_url().'/Home/News';?>"><span>新闻公告</span></a></li>
+                    <li><a href="<?php echo site_url().'/Home/JobWork';?>"><span>作业作品</span></a></li>
+                </ol>
+            </li>
+            <!---->
+            <li>
+                <a href="<?php echo site_url().'/gysj/Summary/index';?>">中心概况</a>
+                <ol class="hide">
+                    <li><a href="<?php echo site_url().'/gysj/Summary/Introduction';?>"><span>专业介绍</span></a></li>
+                    <li><a href="<?php echo site_url().'/gysj/Summary/Teachers';?>"><span>师资建设</span></a></li>
+                    <li><a href="<?php echo site_url().'/gysj/Summary/Work';?>"><span>教师作品</span></a></li>
+                </ol>
+            </li>
+            <!---->
+            <li>
+                <a href="<?php echo site_url().'/gysj/Curriculum/index';?>">教学体系</a>
+                <ol class="hide">
+                    <li><a href="<?php echo site_url().'/gysj/Curriculum/Classes';?>"><span>课程设置</span></a></li>
+                    <li><a href="<?php echo site_url().'/gysj/Curriculum/#';?>"><span>网络课程</span></a></li>
+                    <li><a href="<?php echo site_url().'/gysj/Curriculum/#';?>"><span>实践教学</span></a></li>
+                </ol>
+            </li>
+            <!---->
+            <li>
+                <a href="<?php echo site_url().'/gysj/Teaching_Research/index';?>">实验教学</a>
+                <ol class="hide">
+                    <?php foreach ($tr_classes as $class): ?>
+                    <li>
+                        <a href="<?php echo site_url().'/gysj/Teaching_Research/TeachingResearch/'.$class['cid'];?>">
+                            <span class="ls"><?php echo $class['title']; ?></span>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ol>
+            </li>
+            <!---->
+            <li>
+                <a href="<?php echo site_url().'/gysj/Design_Competition/index';?>">设计竞赛</a>
+                <ol class="hide">
+                    <?php foreach ($dc_classes as $class): ?>
+                    <li>
+                        <a href="<?php echo site_url().'/gysj/Design_Competition/DesignCompetition/'.$class['cid'];?>">
+                            <span class="ls"><?php echo $class['title']; ?></span>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ol>
+            </li>
+            <!---->
+            <li>
+                <a href="<?php echo site_url().'/gysj/Social_Service/index';?>">社会服务</a>
+                <ol class="hide">
+                    <?php foreach ($ss_classes as $class): ?>
+                    <li>
+                        <a href="<?php echo site_url().'/gysj/Social_Service/SocialService/'.$class['cid'];?>">
+                            <span class="ls"><?php echo $class['title']; ?></span>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ol>
+            </li>
+            <!---->
+            <li><a href="<?php echo site_url().'//gysj/Patent_Application/index';?>">专利申请</a>
+                <ol class="hide">
+                    <?php foreach ($pa_classes as $class): ?>
+                    <li>
+                        <a href="<?php echo site_url().'//gysj/Patent_Application/PatentApplication/'.$class['cid'];?>">
+                            <span class="ls"><?php echo $class['title']; ?></span>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ol>
+            </li>
+            <!---->
+            <li><a href="<?php echo site_url().'//gysj/Student_Activities/index';?>">学生活动</a>
+                <ol class="hide">
+                    <?php foreach ($sa_classes as $class): ?>
+                    <li>
+                        <a href="<?php echo site_url().'//gysj/Student_Activities/StudentActivities/'.$class['cid'];?>">
+                            <span class="ls"><?php echo $class['title']; ?></span>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ol>
+            </li>
+            <!---->
+            <li class="last">
+                <a href="#" target="_blank">教学资源</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--
+<!-------------------------------
+页首
+--------------------------------- >
+-->
+
+<!--
+<!-------------------------------
+主体
+--------------------------------- >
+-->
+<div class="content cc"  style="height:auto">
+    <!--
+    <!-- left -- >
+     -->
+    <div class="left">
+        <h3 class="c_t1 f_b f_14">欢迎光临杭州电子科技大学工业产品设计网站<span>Welcome to hdu design!</span></h3>
+        <!-- slide  -->
+        <script src="<?php echo base_url() ?>/style/inc/banner.js"></script>
+        <div class="slide" id="slide">
+            <?php foreach ($items3 as $item): ?>
+            <img class="slidePic"  src="<?php echo base_url().'style/img/banner/'.$item['img'];?>">
+            <?php endforeach; ?>
+        </div>
+        <div class="works">
+            <h3>作业作品</h3>
+            <ul>
+                <?php foreach ($items as $item): ?>
+                <li>
+                    <div class="title">
+                        <h2><a href="<?php echo site_url().'/Home/Item2/'.$item['id'];?>"><?php echo $item['title']; ?></a></h2>
+                        <p class="year"><?php echo $item['year']; ?></p>
+                        <div class="date">
+                            <b><?php echo $item['day']; ?></b><?php echo $item['month']; ?>
+                        </div>
+                    </div>
+                    <p><img src="<?php echo base_url().'style/img/jw/'.$item['img'];?>"><br>
+                        <a href="<?php echo site_url().'/Home/Item2/'.$item['id'];?>"><?php echo $item['title']; ?>
+                            详细内容 ...
+                        </a>
+                    </p>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+            <!-- paging -->
+            <div class="paging">
+                <?php
+            for($i=1;$i<=$pages;$i++){
+            echo "<a href=".site_url()."/Home/home/".$i.">".$i."</a>";
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+    <!--
+    <!-- left -- >
+     -->
+    <!--
+    <!-- side -- >
+     -->
+    <div class="sidebar">
+        <!--news-->
+        <div class="news">
+            <h3 class="c_t1 f_b f_14">新闻公告<span>News Bulletin</span></h3>
+            <ul class="con">
+                <?php foreach ($items2 as $item2): ?>
+                <li>
+                    <a href="<?php echo site_url().'/Home/Item/'.$item2['id'];?>">
+                        <span ><?php echo $item2['title']; ?></span>
+                        <span ><?php echo $item2['addtime']; ?></span>
+
+                    </a>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+            <a href="<?php echo site_url().'/Home/News';?>" class="more"></a>
+        </div>
+        <!---->
+        <ul class="workshop-led cc">
+            <li><a href="<?php echo site_url().'/gysj/Teaching_Research';?>">
+                <img src="<?php echo base_url() ?>/style/img/link/industrial-design_1.jpg" alt="" border="0"/>
+            </a></li>
+            <li><a href="<?php echo site_url().'/gysj/Teaching_Research';?>">
+                <img src="<?php echo base_url() ?>/style/img/link/industrial-design_2.jpg" alt="" border="0"/>
+            </a></li>
+            <li><a href="<?php echo site_url().'/gysj/Social_Service';?>">
+                <img src="<?php echo base_url() ?>/style/img/link/industrial-design_3.jpg" alt="" border="0"/>
+            </a></li>
+            <li><a href="<?php echo site_url().'/gysj/Teaching_Research';?>">
+                <img src="<?php echo base_url() ?>/style/img/link/industrial-design_4.jpg" alt="" border="0"/>
+            </a></li>
+            <li><a href="<?php echo site_url().'/gysj/Curriculum';?>">
+                <img src="<?php echo base_url() ?>/style/img/link/industrial-design_5.jpg" alt="" border="0"/>
+            </a></li>
+        </ul>
+        <!-- links -->
+        <dl class="links">
+            <dt>友情链接</dt>
+            <dd>
+                <a href="http://www.design.polimi.it/" target="_blank">
+                    <img src="<?php echo base_url() ?>/style/img/01.png" alt="米兰理工大学"/>&gt;&gt;
+                    米兰理工大学
+                </a>
+            </dd>
+            <dd>
+                <a href="http://www.collegeforcreativestudies.edu/" target="_blank">
+                    <img src="<?php echo base_url() ?>/style/img/02.png" alt="美国创意设计学院"/>&gt;&gt;
+                    美国创意设计学院
+                </a>
+            </dd>
+            <dd>
+                <a href="http://www.sdu.dk/" target="_blank">
+                    <img src="<?php echo base_url() ?>/style/img/03.png" alt="南丹麦大学"/>&gt;&gt; 南丹麦大学
+                </a>
+            </dd>
+            <dd>
+                <a href="http://www.udk-berlin.de/" target="_blank">
+                    <img src="<?php echo base_url() ?>/style/img/04.png" alt="柏林艺术大学"/>&gt;&gt; 柏林艺术大学
+                </a>
+            </dd>
+            <dd>
+                <a href="http://www.helsinki.fi/university/" target="_blank">
+                    <img src="<?php echo base_url() ?>/style/img/05.png" alt="芬兰赫尔辛基大学"/>&gt;&gt;
+                    芬兰赫尔辛基大学
+                </a>
+            </dd>
+            <dd>
+                <a href="http://www.ixdc.org/" target="_blank">
+                    <img src="<?php echo base_url() ?>/style/img/06.png" alt="ixdc交互设计委员会"/>&gt;&gt;
+                    ixdc交互设计委员会
+                </a>
+            </dd>
+            <dd>
+                <a href="http://www.dolcn.com/" target="_blank">
+                    <img src="<?php echo base_url() ?>/style/img/07.png" alt="设计在线"/>&gt;&gt; 设计在线
+                </a>
+            </dd>
+            <dd>
+                <a href="http://www.lens-china.org/" target="_blank">
+                    <img src="<?php echo base_url() ?>/style/img/08.png" alt="中国可持续学习网"/>&gt;&gt;
+                    中国可持续学习网
+                </a>
+            </dd>
+        </dl>
+    </div>
+    <!--
+    <!-- side -- >
+     -->
+</div>
+<!--
+<!-------------------------------
+主体
+--------------------------------- >
+-->
+
+</body>
+</html>
